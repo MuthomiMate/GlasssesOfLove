@@ -17,8 +17,28 @@ export const UseImages = () => {
           }
         }
       },
+      workFirstImage: file(relativePath: { eq: "clean.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      workSecondImage: file(relativePath: { eq: "fun.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      workThirdImage: file(relativePath: { eq: "cooking.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
-  console.log(data.icon)
   return data
 }

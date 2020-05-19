@@ -29,7 +29,6 @@ class Header extends Component {
   render(){
     const { scrollY } = this.state;
     const hideBackground = scrollY > 60;
-    const setToFixed = scrollY > 150;
     const StyledHeader = styled.div`
       transition: background 0.5s ease;
       background: ${hideBackground ? "#FFFFFF" : "transparent"};
@@ -37,7 +36,7 @@ class Header extends Component {
       position: fixed;
       height: 5em;
       width: 100%;
-      z-index: 9;
+      z-index: 10;
     `
     const StyledDiv = styled.div`
       display: flex;
