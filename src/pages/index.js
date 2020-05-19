@@ -6,13 +6,19 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Multimedia from "../components/multimedia"
 import StyledBackgroundSection from "../components/background"
+import StyledReason from "../components/reason"
+import Upcoming from "../components/upcoming"
+import Work from "../components/work"
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <StyledBackgroundSection />
-    <Multimedia />
-    <Link to="/page-2/">Go to page 2</Link>
+    <StyledReason />
+    <Upcoming />
+    <Work />
+    <Footer />
   </Layout>
 )
 

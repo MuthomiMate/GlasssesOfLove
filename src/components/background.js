@@ -15,7 +15,6 @@ const ImageTitle = styled.div`
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
-  position: fixed;
   width: 100%;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0,0,0,0.65));
   background-repeat: no-repeat;
