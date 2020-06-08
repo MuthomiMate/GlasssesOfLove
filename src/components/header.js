@@ -22,6 +22,7 @@ class Header extends Component {
 
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
+    console.log(currentScrollPos);
     this.setState({
       scrollY: currentScrollPos
     })
