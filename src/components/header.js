@@ -33,9 +33,9 @@ class Header extends Component {
     console.log(scrollY, hideBackground);
     const StyledHeader = styled.div`
       transition: background 0.5s ease;
-      background: ${hideBackground ? "#FFFFFF" : "transparent"};
+      background: ${props => (props.hideBackground ? "#FFFFFF" : "transparent")};
       margin-bottom: 1.45rem;
-      box-shadow:  ${hideBackground ? "0 1px 1px rgba(0,0,0,.1)" : "none"};
+      box-shadow:  ${props => (props.hideBackground ? "0 1px 1px rgba(0,0,0,.1)" : "none")};
       position: fixed;
       height: 5em;
       width: 100%;
@@ -67,7 +67,7 @@ class Header extends Component {
       font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
       font-weight: 600;
       transition: color 0.5s ease;
-      color: ${hideBackground ? "#adbcbb" : "#FFFFFF"};
+      color: ${props => (props.hideBackground ?"#adbcbb" : "#FFFFFF")};
       font-size: 150%;
       margin-bottom: 0;
     }
@@ -78,16 +78,16 @@ class Header extends Component {
   `
   const StyledLink = styled(Link)`
     transition: color 0.5s ease;
-    color: ${hideBackground ? "#adbcbb" : "#FFFFFF"};
+    color: ${hideBackground ?"#adbcbb" : "#FFFFFF"};
     text-decoration: none;
   `
     return (
-      <StyledHeader>
+      <StyledHeader hideBackground={hideBackground}>
         <StyledDiv>
           <a href="http://www.glassesoflove.or.ke">
             <img src={logo} alt="Logo" />
           </a>
-          <Nav>
+          <Nav hideBackground={hideBackground}>
             <ul>
             <li> <StyledLink to="/">Home</StyledLink></li>
             <li>Project</li>
