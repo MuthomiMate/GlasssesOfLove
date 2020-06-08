@@ -30,6 +30,7 @@ class Header extends Component {
   render(){
     const { scrollY } = this.state;
     const hideBackground = scrollY > 60;
+    console.log(scrollY, hideBackground);
     const StyledHeader = styled.div`
       transition: background 0.5s ease;
       background: ${hideBackground ? "#FFFFFF" : "transparent"};
