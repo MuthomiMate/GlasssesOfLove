@@ -28,7 +28,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   overflow: scroll;
 `
 const BackgroundSection = ({name}) => {
-  const [scrollY, setScrollY] = useState(window.pageYOffset)
+  const [scrollY, setScrollY] = useState(0)
   useEffect(() => {
     function handleScroll (){
       setScrollY(window.pageYOffset);
