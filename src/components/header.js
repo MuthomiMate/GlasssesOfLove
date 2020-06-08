@@ -8,7 +8,7 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      scrollY: window.pageYOffset
+      scrollY: 0
     }
   }
   componentDidMount() {
@@ -33,6 +33,7 @@ class Header extends Component {
       transition: background 0.5s ease;
       background: ${hideBackground ? "#FFFFFF" : "transparent"};
       margin-bottom: 1.45rem;
+      box-shadow:  ${hideBackground ? "0 1px 1px rgba(0,0,0,.1)" : "none"};
       position: fixed;
       height: 5em;
       width: 100%;
@@ -73,6 +74,11 @@ class Header extends Component {
       margin-bottom: 0;
     }
   `
+  const StyledLink = styled(Link)`
+    transition: color 0.5s ease;
+    color: ${hideBackground ? "#adbcbb" : "#FFFFFF"};
+    text-decoration: none;
+  `
     return (
       <StyledHeader>
         <StyledDiv>
@@ -81,10 +87,10 @@ class Header extends Component {
           </a>
           <Nav>
             <ul>
-            <li>Home</li>
+            <li> <StyledLink to="/">Home</StyledLink></li>
             <li>Project</li>
             <li>Testmonial</li>
-            <li>Blog</li>
+            <li> <StyledLink to="/about">About Us</StyledLink></li>
             <li>Contact Us</li>
             </ul>
           </Nav>
