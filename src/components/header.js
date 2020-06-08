@@ -76,9 +76,9 @@ class Header extends Component {
       margin-bottom: 0;
     }
   `
-  const StyledLink = styled(Link)`
+  const StyledLink = styled(({ hideBackground, ...rest}) => <Link {...rest} />)`
     transition: color 0.5s ease;
-    color: ${hideBackground ?"#adbcbb" : "#FFFFFF"};
+    color: ${props => (props.hideBackground ?"#adbcbb" : "#FFFFFF")};
     text-decoration: none;
   `
     return (
@@ -89,10 +89,10 @@ class Header extends Component {
           </a>
           <Nav hideBackground={hideBackground}>
             <ul>
-            <li> <StyledLink to="/">Home</StyledLink></li>
+            <li> <StyledLink to="/" hideBackground={hideBackground}>Home</StyledLink></li>
             <li>Project</li>
             <li>Testmonial</li>
-            <li> <StyledLink to="/about">About Us</StyledLink></li>
+            <li> <StyledLink to="/about" hideBackground={hideBackground}>About Us</StyledLink></li>
             <li>Contact Us</li>
             </ul>
           </Nav>
