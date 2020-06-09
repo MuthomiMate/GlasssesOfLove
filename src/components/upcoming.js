@@ -34,8 +34,7 @@ const ImagesDiv = styled.div`
 
     @media screen and (max-width: 850px) {
         flex-direction: column;
-        width: 100%;
-        margin: .5rem;
+        margin: .5rem auto;
     }
 `
 const FirstImage = styled.div`
@@ -43,7 +42,7 @@ const FirstImage = styled.div`
     height: 100%;
 
     @media screen and (max-width: 850px) {
-        margin: 1rem;
+        margin: 1rem 0;
         width: 100%
     }
 `
