@@ -38,6 +38,13 @@ export const UseImages = () => {
           }
         }
       },
+      muthomiImage: file(relativePath: { eq: "pp.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
   return data
