@@ -10,6 +10,10 @@ const MainDiv = styled.div`
     font-size: 48px;
     font-weight: bold;
     color: #FFFFFF;
+
+    @media screen and (max-width: 800px) {
+        font-size: 32px;
+    }
 `
 
 const Multimedia = () => {
