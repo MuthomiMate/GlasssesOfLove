@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import { UseImages } from "./images"
 
 const MainDIv = styled.div`
@@ -24,6 +25,9 @@ const MainDIv = styled.div`
     }
     @media screen and (max-width: 490px) {
         height: 120rem;
+    }
+    @media screen and (max-width: 357px) {
+        height: 130rem;
     }
 
     h3 {
@@ -130,6 +134,8 @@ const Description = styled.div`
     button {
         background-color: #00bfad;
         text-align: center;
+        border: none;
+        outline: none;
         border-color: #fff;
         font-size: 18px;
         font-weight: bold;
@@ -142,7 +148,10 @@ const Button = styled.div`
     justify-content: center;
     padding-bottom: 1rem;
 `
-
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: #FFFFFF;
+`
 
 
 const Work = () => {
@@ -156,7 +165,9 @@ const Work = () => {
                 <Card>
                     <ImageDiv>
                         <ImageBackground>
-                            VIEW ALL PHOTOS
+                            <StyledLink to="/coming-soon">
+                                VIEW ALL PHOTOS
+                            </StyledLink>
                         </ImageBackground>
                         <Img fluid={workFirstImage.childImageSharp.fluid} />
                     </ImageDiv>
@@ -166,7 +177,9 @@ const Work = () => {
                             <h2> January 12, 2019</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
                             <Button>
-                                <button>View  all pictures</button>
+                                <StyledLink to="/coming-soon">
+                                    <button>View  all pictures</button>
+                                </StyledLink>
                             </Button>
                         </div>
                     </Description>
@@ -174,7 +187,9 @@ const Work = () => {
                 <Card>
                     <ImageDiv>
                         <ImageBackground>
-                            VIEW ALL PHOTOS
+                            <StyledLink to="/coming-soon">
+                                VIEW ALL PHOTOS
+                            </StyledLink>
                         </ImageBackground>
                         <Img fluid={workSecondImage.childImageSharp.fluid} />
                     </ImageDiv>
@@ -184,7 +199,9 @@ const Work = () => {
                             <h2> January 12, 2019</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
                             <Button>
-                                <button>View  all pictures</button>
+                                <StyledLink to="/coming-soon">
+                                    <button>View  all pictures</button>
+                                </StyledLink>
                             </Button>
                         </div>
                     </Description>
@@ -192,7 +209,9 @@ const Work = () => {
                 <Card>
                     <ImageDiv>
                         <ImageBackground>
-                            VIEW ALL PHOTOS
+                            <StyledLink to="/coming-soon">
+                                VIEW ALL PHOTOS
+                            </StyledLink>
                         </ImageBackground>
                         <Img fluid={workThirdImage.childImageSharp.fluid} />
                     </ImageDiv>
@@ -202,7 +221,9 @@ const Work = () => {
                             <h2> January 12, 2019</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
                             <Button>
-                                <button>View  all pictures</button>
+                                <StyledLink to="/coming-soon">
+                                    <button>View  all pictures</button>
+                                </StyledLink>
                             </Button>
                         </div>
                     </Description>
