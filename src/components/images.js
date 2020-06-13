@@ -17,23 +17,23 @@ export const UseImages = () => {
           }
         }
       },
-      workFirstImage: file(relativePath: { eq: "clean.jpeg" }) {
+      workFirstImage: file(relativePath: { eq: "Dinner1.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
-      workSecondImage: file(relativePath: { eq: "fun.jpeg" }) {
+      workSecondImage: file(relativePath: { eq: "Imani1.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
             ...GatsbyImageSharpFluid
           }
         }
       },
-      workThirdImage: file(relativePath: { eq: "cooking.jpeg" }) {
+      workThirdImage: file(relativePath: { eq: "Eldoret4.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
             ...GatsbyImageSharpFluid
           }
         }

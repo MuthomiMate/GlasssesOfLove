@@ -44,18 +44,29 @@ const CardsDiv = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 332px) {
+        justify-content: center;
+    }
 `
 const Card = styled.div`
-    flex: 0 1 32%;
+    flex: 0 1 18%;
     margin: 1rem 0;
     position: relative;
 
+    @media screen and (max-width: 1500PX) {
+        flex: 0 1 23%;
+    }
+
     @media screen and (max-width: 870px) {
-        flex: 0 1 48%;
+        flex: 0 1 32%;
     }
 
     @media screen and (max-width: 500px) {
-        flex: 0 1 98%;
+        flex: 0 1 48%;
+    }
+    @media screen and (max-width: 332px) {
+        flex: 0 1 80%;
     }
 `
 const InfoDiv = styled.div`
@@ -75,85 +86,88 @@ const InfoDiv = styled.div`
         font-weight: 400;
         margin: 0;
     }
+
+    @media screen and (max-width: 1685px) {
+        h5 {
+            font-size: 25px;
+        }
+        h4 {
+            font-size: 20px
+        }
+    }
+
+    @media screen and (max-width: 1335px) {
+        h5 {
+            font-size: 14px;
+        }
+        h4 {
+            font-size: 10px;
+        }
+    }
+
+
+    @media screen and (max-width: 332px){
+        h5 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+    }
 `
 
 const CardOverlay = styled.div`
-    position: absolute;
     width: 100%;
-    padding-top: 100%;
+    height: 100%;
     display: none;
-    background: #121B22;
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #121B22;
     transition: all 0.5s;
     color: #FFFFFF;
     z-index: 9;
     opacity: 0.8;
 
     p {
-        text-align: center;
-        font-size: 16px;
+        text-align: start;
+        font-size: 12px;
         font-family: MaisonNeue, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 400;
         margin-bottom: 0;
 
         @media screen and (max-width: 1350px) {
-            font-size: 14px;
+            font-size: 11px;
         }
-        @media screen and (max-width: 1125px) {
-            font-size: 12px;
+        @media screen and (max-width: 1185px) {
+            font-size: 9px;
         }
 
-        @media screen and (max-width: 930px) {
-            font-size: 11px;
+        @media screen and (max-width: 1010px) {
+            font-size: 6px;
         }
 
         @media screen and (max-width: 870px) {
-            font-size: 14px;
-        }
-
-        @media screen and (max-width: 680px) {
-            font-size: 12px;
-        }
-
-        @media screen and (max-width: 610px) {
-            font-size: 11px;
-        }
-
-        @media screen and (max-width: 590px) {
-            font-size: 8px;
-        }
-
-        @media screen and (max-width: 500px) {
-            font-size: 12px;
+            font-size: 7px;
         }
     }
 
     ${Card}:hover & {
         display: flex;
+
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
     }
 `
 const Icons = styled.div`
     display: flex;
 `
 
-const Icon = styled.div`
-
-`
-
 const CardOverlayContent = styled.div`
-    margin-top: -400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    @media screen and (max-width: 1350px) {
-        margin-top: -350px;
-    }
-
-
-    @media screen and (max-width: 1100px) {
-        margin-top: -270px;
-    }
 
 `
 
@@ -167,7 +181,7 @@ const Profile = () => {
             </TextDiv>
             <CardsDiv>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -182,11 +196,11 @@ const Profile = () => {
                     </div>
                     <InfoDiv>
                         <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h4>Founder/ChairPerson</h4>
                     </InfoDiv>
                 </Card>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -202,12 +216,12 @@ const Profile = () => {
                         />
                     </div>
                     <InfoDiv>
-                        <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h5>Joy Korir</h5>
+                        <h4>Vice Chairperson</h4>
                     </InfoDiv>
                 </Card>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -221,12 +235,12 @@ const Profile = () => {
                         <Img fluid={muthomiImage.childImageSharp.fluid} />
                     </div>
                     <InfoDiv>
-                        <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h5>Jane Wambui</h5>
+                        <h4>Secretary</h4>
                     </InfoDiv>
                 </Card>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -240,12 +254,12 @@ const Profile = () => {
                         <Img fluid={muthomiImage.childImageSharp.fluid} />
                     </div>
                     <InfoDiv>
-                        <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h5>Lilian Wangui</h5>
+                        <h4>Treasurer</h4>
                     </InfoDiv>
                 </Card>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                     <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -259,12 +273,12 @@ const Profile = () => {
                         <Img fluid={muthomiImage.childImageSharp.fluid} />
                     </div>
                     <InfoDiv>
-                        <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h5>Denis Kori</h5>
+                        <h4>Media Leader</h4>
                     </InfoDiv>
                 </Card>
                 <Card>
-                    <div>
+                    <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
@@ -278,8 +292,176 @@ const Profile = () => {
                         <Img fluid={muthomiImage.childImageSharp.fluid} />
                     </div>
                     <InfoDiv>
-                        <h5>Yvonne Makena</h5>
-                        <h4>Founder</h4>
+                        <h5>Ian Mutwiri</h5>
+                        <h4>Hospitality Leader</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Pascal Aloo</h5>
+                        <h4>Partnership & Fundraising Leader</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Gift Ogembo</h5>
+                        <h4>Disciplinarian</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Austin Munene</h5>
+                        <h4>Legal Matters Leader</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Brian mwithiga</h5>
+                        <h4>Event Coordinator</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Nimrod Kimani</h5>
+                        <h4>Event Coordinator</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Andrew Thuku</h5>
+                        <h4>Committe Member</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Irene Onyango</h5>
+                        <h4>Committe Member</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img
+                            fluid={muthomiImage.childImageSharp.fluid}
+                        />
+                    </div>
+                    <InfoDiv>
+                        <h5>Lamech Fukwo</h5>
+                        <h4>Committe Member</h4>
                     </InfoDiv>
                 </Card>
             </CardsDiv>

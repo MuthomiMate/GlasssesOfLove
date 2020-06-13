@@ -2,15 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import Img from "gatsby-image";
 
 const MainDiv = styled.div`
     width: 100%;
     background: #FFFFFF;
-    height: 45rem;
-
-    @media screen and (max-width: 850px) {
-        height: 100rem;
-    }
 
     h3 {
         text-align: center;
@@ -27,23 +23,18 @@ const MainDiv = styled.div`
 const ImagesDiv = styled.div`
     width: 90%;
     margin: auto;
-    height: 80%;
+    margin-top: 3rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    @media screen and (max-width: 850px) {
-        flex-direction: column;
-        margin: .5rem auto;
-    }
 `
 const FirstImage = styled.div`
-    width: 48%;
-    height: 100%;
+    flex: 0 1 48%;
+    margin: 1rem auto;
 
     @media screen and (max-width: 850px) {
-        margin: 1rem 0;
-        width: 100%
+        flex: 0 1 80%;
     }
 `
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -77,18 +68,10 @@ const Upcoming = () => {
             </h3>
             <ImagesDiv>
                 <FirstImage>
-                    <StyledBackgroundImage
-                        Tag="section"
-                        fluid={imageData}
-                        preserveStackingContext={true}
-                    />
+                    <Img fluid={imageData} />
                 </FirstImage>
                 <FirstImage>
-                    <StyledBackgroundImage
-                        Tag="section"
-                        fluid={imageData}
-                        preserveStackingContext={true}
-                    />
+                    <Img fluid={imageData} />
                 </FirstImage>
             </ImagesDiv>
         </MainDiv>)

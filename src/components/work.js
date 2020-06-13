@@ -6,29 +6,8 @@ import { UseImages } from "./images"
 
 const MainDIv = styled.div`
     background: #EDEFF1;
-    height: 47rem;
     width: 100%;
     margin-top: 5rem;
-
-    @media screen and (max-width: 976px) {
-        height: 48rem;
-    }
-
-    @media screen and (max-width: 797px) {
-        height: 52rem;
-    }
-    @media screen and (max-width: 697px) {
-        height: 85rem;
-    }
-    @media screen and (max-width: 550px) {
-        height: 115rem;
-    }
-    @media screen and (max-width: 490px) {
-        height: 120rem;
-    }
-    @media screen and (max-width: 357px) {
-        height: 130rem;
-    }
 
     h3 {
         text-align: center;
@@ -53,6 +32,8 @@ const ImageDiv = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    border-top: none;
+    border: 1px solid #d1d3d1;
 `
 
 const ImageBackground = styled.div`
@@ -73,38 +54,18 @@ const ImageBackground = styled.div`
     }
 `
 const Card = styled.div`
-    flex-grow: 1;
-    margin: 0 .5rem;
-    width: 30%;
-    height: 90%;
-    @media screen and (max-width: 696px) {
-        margin-top: 1rem;
-        width: 40%;
+    flex: 0 1 32%;
+    margin: 1rem auto;
+
+    @media screen and (max-width: 870px) {
+        flex: 0 1 48%;
     }
 
-    @media screen and (max-width: 550px) {
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    Img {
-        height: 51.5%;
-    }
-
-    ImageBackground {
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 51.5%;
-        opacity: 0;
-        z-index: 11;
-        transition: all 0.5s;
-        background: rgba(0, 0, 0, 0.6);
+    @media screen and (max-width: 500px) {
+        flex: 0 1 90%;
     }
 `
 const Description = styled.div`
-    border-top: none;
-    border: 1px solid #d1d3d1;
     h3 {
         text-align: start;
         font-size: 2em;
@@ -164,17 +125,18 @@ const Work = () => {
             <Cards>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workFirstImage.childImageSharp.fluid} />
-                    </ImageDiv>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
+                                <StyledLink to="/coming-soon">
+                                    VIEW ALL PHOTOS
+                                </StyledLink>
+                            </ImageBackground>
+                            <Img fluid={workFirstImage.childImageSharp.fluid} />
+                        </div>
                     <Description>
                         <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
+                            <h3>GOL Gala Dinner</h3>
+                            <h2> February 29, 2020</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
                             <Button>
                                 <StyledLink to="/coming-soon">
@@ -183,50 +145,55 @@ const Work = () => {
                             </Button>
                         </div>
                     </Description>
+                </ImageDiv>
                 </Card>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workSecondImage.childImageSharp.fluid} />
-                    </ImageDiv>
-                    <Description>
-                        <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
                                 <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
+                                    VIEW ALL PHOTOS
                                 </StyledLink>
-                            </Button>
+                            </ImageBackground>
+                            <Img fluid={workSecondImage.childImageSharp.fluid} />
                         </div>
-                    </Description>
+                        <Description>
+                            <div>
+                                <h3>Imani Children’s Home (Soweto, Kayole)</h3>
+                                <h2>December 15, 2019</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
+                                <Button>
+                                    <StyledLink to="/coming-soon">
+                                        <button>View  all pictures</button>
+                                    </StyledLink>
+                                </Button>
+                            </div>
+                        </Description>
+                    </ImageDiv>
                 </Card>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workThirdImage.childImageSharp.fluid} />
-                    </ImageDiv>
-                    <Description>
-                        <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
                                 <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
+                                    VIEW ALL PHOTOS
                                 </StyledLink>
-                            </Button>
+                            </ImageBackground>
+                            <Img fluid={workThirdImage.childImageSharp.fluid} />
                         </div>
-                    </Description>
+                        <Description>
+                            <div>
+                                <h3>Berur and Neema Annex Children Homes</h3>
+                                <h2>October 18-20, 2019</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
+                                <Button>
+                                    <StyledLink to="/coming-soon">
+                                        <button>View  all pictures</button>
+                                    </StyledLink>
+                                </Button>
+                            </div>
+                        </Description>
+                    </ImageDiv>
                 </Card>
             </Cards>
         </MainDIv>
