@@ -261,6 +261,25 @@ const Profile = () => {
                 </Card>
                 <Card>
                     <div style={{position: "relative"}}>
+                        <CardOverlay>
+                            <CardOverlayContent>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <Icons>
+                                    <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
+                                    <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                    <SocialIcon network="instagram" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
+                                </Icons>
+                            </CardOverlayContent>
+                        </CardOverlay>
+                        <Img fluid={noImageGirl.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}/>
+                    </div>
+                    <InfoDiv>
+                        <h5>Nelly Nteere</h5>
+                        <h4>Vice Treasurer</h4>
+                    </InfoDiv>
+                </Card>
+                <Card>
+                    <div style={{position: "relative"}}>
                     <CardOverlay>
                             <CardOverlayContent>
                                 <p>Witty, humorous, pensive but with a reserved and calm disposition, Dennis Kori is a practicing graphic designer and IT person. At present, he is the graphic designer and social media admin to Glasses of Love, a freelance content and technical writer and the co-founder of Allure Visuals Ltd.</p>
