@@ -61,7 +61,6 @@ class Header extends Component {
 
       img {
         height: 4rem;
-        width: 9.75rem;
         margin: auto 0;
       }
     `

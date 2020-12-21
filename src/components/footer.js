@@ -15,7 +15,6 @@ const MainDiv = styled.div`
 
     img {
         height: 5rem;
-        width: 10.75rem;
         margin: auto 0;
       }
     h3 {
