@@ -2,22 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-    background-color: #00BFAD;
+    background-color: #F19002;
     margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #ffffff;
-
-    @media screen and (max-width: 575px) {
-        height: 40rem;
-    }
-    @media screen and (max-width: 500px) {
-        height: 45rem;
-    }
-    @media screen and (max-width: 475px) {
-        height: 50rem;
-    }
 
     h3 {
         line-height: 69.888px;

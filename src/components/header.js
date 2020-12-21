@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { Component } from "react"
 import styled from "styled-components"
 import logo from "../images/icon.png";
+import logoBright from "../images/icon-white.png"
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 
@@ -132,7 +133,7 @@ class Header extends Component {
       <StyledHeader hideBackground={hideBackground}>
         <StyledDiv>
           <a href="http://www.glassesoflove.or.ke">
-            <img src={logo} alt="Logo" />
+            <img src={hideBackground ? logo : logoBright} alt="Logo" />
           </a>
           <StyledBars onClick={this.toggleMobileMenu}>
             <FaBars color={hideBackground ? "#000000" : "#FFFFFF"} size="2em" />

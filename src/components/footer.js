@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import  { FaTwitterSquare, FaFacebookSquare, FaYoutubeSquare, FaInstagramSquare} from "react-icons/fa";
-import logo from "../images/icon.png";
+import  { FaTwitter, FaFacebook, FaYoutube, FaInstagram} from "react-icons/fa";
+import logo from "../images/icon-white.png";
 import SecondFooter from "./secondfooter";
 
 const MainDiv = styled.div`
-    background: #25407B;
+    background: #121B22;
     width: 100%;
     height: 22rem;
 
@@ -26,7 +26,7 @@ const MainDiv = styled.div`
         transition: color .6s ease-in-out;
 
         &: hover {
-            color: #00bfad;
+            color: #f7a13e;
         }
     }
 `
@@ -60,7 +60,7 @@ const Icons = styled.div`
         padding: 0 .5rem;
 
         &:hover {
-            color: #00bfad;
+            color: #f7a13e;
         }
     }
 
@@ -94,12 +94,12 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h2>
+                    <h2 style={{color: '#FFF'}}>
                         Follow us
                     </h2>
                     <Icons>
-                        <FaInstagramSquare
-                            color="#00bfad"
+                        <FaInstagram
+                            color="#FFF"
                             size="2em"
                         />
                         <a href="https://www.instagram.com/glassesoflove" target="_blank">
@@ -107,8 +107,8 @@ const Footer = () => {
                         </a>
                     </Icons>
                     <Icons>
-                        <FaTwitterSquare
-                            color="#00bfad"
+                        <FaTwitter
+                            color="#1DA1F2"
                             size="2em"
                         />
                         <a href="https://twitter.com/glassesoflove" target="_blank">
@@ -116,8 +116,8 @@ const Footer = () => {
                         </a>
                     </Icons>
                     <Icons>
-                        <FaFacebookSquare
-                            color="#00bfad"
+                        <FaFacebook
+                            color="#4267B2"
                             size="2em"
                         />
                         <a href="https://www.facebook.com/glassesoflove/" target="_blank">
@@ -125,8 +125,8 @@ const Footer = () => {
                         </a>
                     </Icons>
                     <Icons>
-                        <FaYoutubeSquare
-                            color="#00bfad"
+                        <FaYoutube
+                            color="#FF0000"
                             size="2em"
                         />
                         <a href="https://www.youtube.com/channel/UCf4tm8Ky22AE4PtASxM4s6w" target="_blank">

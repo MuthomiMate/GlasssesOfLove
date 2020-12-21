@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components"
 
 const MainDiv = styled.div`
-    background: #03BFAD;
+    background: #F19002;
     height: 100vh;
     display: flex;
     justify-content: center;

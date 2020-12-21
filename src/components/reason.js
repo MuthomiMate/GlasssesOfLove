@@ -13,7 +13,6 @@ const StyledDiv = styled.div`
     h3 {
         line-height: 1.2;
         margin-bottom: .6em;
-        color: #00bfad;
         font-size: 2.15rem;
         font-weight: 600;
         font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;

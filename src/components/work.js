@@ -12,7 +12,6 @@ const MainDIv = styled.div`
     h3 {
         text-align: center;
         line-height: 1.2;
-        color: #00bfad;
         font-size: 2.8em;
         padding: 1em 1em 0.5em 1em;
         font-weight: 600;
@@ -137,12 +136,6 @@ const Work = () => {
                         <div>
                             <h3>GOL Gala Dinner</h3>
                             <h2> February 29, 2020</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
-                                <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
-                                </StyledLink>
-                            </Button>
                         </div>
                     </Description>
                 </ImageDiv>
@@ -161,12 +154,6 @@ const Work = () => {
                             <div>
                                 <h3>Imani Children’s Home (Soweto, Kayole)</h3>
                                 <h2>December 15, 2019</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                                <Button>
-                                    <StyledLink to="/coming-soon">
-                                        <button>View  all pictures</button>
-                                    </StyledLink>
-                                </Button>
                             </div>
                         </Description>
                     </ImageDiv>
@@ -185,12 +172,6 @@ const Work = () => {
                             <div>
                                 <h3>Berur and Neema Annex Children Homes</h3>
                                 <h2>October 18-20, 2019</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                                <Button>
-                                    <StyledLink to="/coming-soon">
-                                        <button>View  all pictures</button>
-                                    </StyledLink>
-                                </Button>
                             </div>
                         </Description>
                     </ImageDiv>

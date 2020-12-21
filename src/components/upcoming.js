@@ -11,7 +11,6 @@ const MainDiv = styled.div`
     h3 {
         text-align: center;
         line-height: 1.2;
-        color: #00bfad;
         padding: 1em 1em 0.5em 1em;
         font-size: 2.8rem;
         font-weight: 600;

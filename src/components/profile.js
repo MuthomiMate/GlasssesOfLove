@@ -19,7 +19,6 @@ const TextDiv = styled.div`
         font-weight: 600;
         font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
         text-rendering: optimizeLegibility;
-        color: #00bfad;
 
         @media screen and (max-width: 420px) {
             font-size: 35px;
@@ -135,6 +134,7 @@ const CardOverlay = styled.div`
         font-family: MaisonNeue, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 400;
         margin-bottom: 0;
+        margin-left: .3rem;
 
         @media screen and (max-width: 1350px) {
             font-size: 11px;
@@ -172,7 +172,7 @@ const CardOverlayContent = styled.div`
 `
 
 const Profile = () => {
-    const { muthomiImage } = UseImages()
+    const { muthomiImage, koriImage, lamechImage, kimaniImage, lilianImage, austinImage, noImageGirl, noImageBoy } = UseImages()
     return (
         <MainDiv>
             <TextDiv>
@@ -192,7 +192,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={muthomiImage.childImageSharp.fluid} />
+                        <Img fluid={muthomiImage.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}} />
                     </div>
                     <InfoDiv>
                         <h5>Yvonne Makena</h5>
@@ -212,7 +212,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageGirl.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -232,7 +233,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={muthomiImage.childImageSharp.fluid} />
+                        <Img fluid={noImageGirl.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}/>
                     </div>
                     <InfoDiv>
                         <h5>Jane Wambui</h5>
@@ -251,7 +252,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={muthomiImage.childImageSharp.fluid} />
+                        <Img fluid={lilianImage.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}} />
                     </div>
                     <InfoDiv>
                         <h5>Lilian Wangui</h5>
@@ -262,7 +263,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                     <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>Witty, humorous, pensive but with a reserved and calm disposition, Dennis Kori is a practicing graphic designer and IT person. At present, he is the graphic designer and social media admin to Glasses of Love, a freelance content and technical writer and the co-founder of Allure Visuals Ltd.</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -270,7 +271,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={muthomiImage.childImageSharp.fluid} />
+                        <Img fluid={koriImage.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}/>
                     </div>
                     <InfoDiv>
                         <h5>Denis Kori</h5>
@@ -281,7 +282,8 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>Ian is a graduate Civil Engineer passionate about Engineering and Project Management. He seeks to create solutions to socioeconomic challenges facing the region, one through his technical contribution and two through direct involvement in charitable contributions.
+                                Ian likes to cook in his free time.</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -289,7 +291,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={muthomiImage.childImageSharp.fluid} />
+                        <Img fluid={noImageBoy.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}} />
                     </div>
                     <InfoDiv>
                         <h5>Ian Mutwiri</h5>
@@ -309,7 +311,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageBoy.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -321,7 +324,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>I am communication specialist who is particularly passionate about advocacy and fighting for better living conditions for the underserved communities. I love charity because its an opportunity to be a voice for the voiceless and a chance to provide service above once self.</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -330,7 +333,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageGirl.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -342,7 +346,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>I have always felt passionate about helping Kids who are in need because there are a gift from God and they are the most undeserving vulnerable people in our society. In spirit of charity and Lawyers social responsibility I will take any chance to support children.</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -351,7 +355,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={austinImage.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -372,7 +377,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageBoy.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -384,7 +390,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>A lover of humanity, professionally and socially! I am human resource professional in pursuit of helping people get their dream jobs and have safe work spaces. Glasses of Love (GoL) has helped me extend this socially; showing that we can put our youth into good use to the society. My highlight has always been interacting with different people by availing ourselves for other people. This is one of the best ways I have and will continue utilizing my youth. Glasses of Love Rocks!!!</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -393,7 +399,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={kimaniImage.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -405,7 +412,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>My joy is when you put a smile on another's face</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -414,7 +421,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageBoy.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -435,7 +443,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={noImageGirl.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>
@@ -447,7 +456,7 @@ const Profile = () => {
                     <div style={{position: "relative"}}>
                         <CardOverlay>
                             <CardOverlayContent>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan et odio eu pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet nibh a urna pretium maximus. Ut sapien tellus, interdum vitae commodo eget, dapibus interdum dolor. Suspendisse quis purus eget lacus scelerisque porttitor. Nulla vehicula posuere massa nec interdum.</p>
+                                <p>Professionally I can say I'm a photographer, a videographer and a graphics designer...I doubt I know what a testimonial is apart from the testimonies I hear in church...Why I love charity? First of all, I love kids... and I'd hate to see anyone lack in life. Once you go through that route, you wouldn't want anyone else to go through the same</p>
                                 <Icons>
                                     <SocialIcon network="twitter" fgColor="#ffffff" style={{height: 30, width: 30,  margin: ".2rem" }}/>
                                     <SocialIcon network="facebook" fgColor="#ffffff" style={{height: 30, width: 30, margin: ".2rem"}}/>
@@ -456,7 +465,8 @@ const Profile = () => {
                             </CardOverlayContent>
                         </CardOverlay>
                         <Img
-                            fluid={muthomiImage.childImageSharp.fluid}
+                            fluid={lamechImage.childImageSharp.fluid}
+                            objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}
                         />
                     </div>
                     <InfoDiv>

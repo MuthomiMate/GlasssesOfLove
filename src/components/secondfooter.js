@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MainDiv = styled.div`
     height: 5rem;
-    background: #f7a13e;
+    background: #F19002;
 `
 
 const Section = styled.div`
