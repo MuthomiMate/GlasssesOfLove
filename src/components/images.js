@@ -24,7 +24,7 @@ export const UseImages = () => {
           }
         }
       },
-      workSecondImage: file(relativePath: { eq: "Imani1.jpg" }) {
+      workSecondImage: file(relativePath: { eq: "kibera.jpeg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
             ...GatsbyImageSharpFluid
@@ -74,6 +74,13 @@ export const UseImages = () => {
         }
       },
       austinImage: file(relativePath: { eq: "austin.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      janeImage: file(relativePath: { eq: "jane.jpeg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid

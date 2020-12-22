@@ -34,10 +34,10 @@ const Reason = () => {
         <StyledDiv>
             <DetailsDiv>
                 <h3>
-                Today's society is packed with children who are growing up without parental love and care.
+                Bringing brightness to a little life.
                 </h3>
                 <p>
-                This leads to quite a number of problems  in their day to day lives. Our goal is to ensure that they never feel they are alone. This we do through our mentorship program that we hold in each and every visit we conduct. The goal is to share love and brightness to a little soul. Aside from the mentorship, we ensure that a child has basic needs through our care package that we distribute in our visits. We come together as a society to make this happen.
+                Today's society is packed with children who are growing up without parental love and care. This leads to quite a number of problems  in their day to day lives. Our goal is to ensure that they never feel they are alone. This we do through our mentorship program that we hold in each and every visit we conduct. The goal is to share love and brightness to a little soul. Aside from the mentorship, we ensure that a child has basic needs through our care package that we distribute in our visits. We come together as a society to make this happen.
                 </p>
             </DetailsDiv>
         </StyledDiv>

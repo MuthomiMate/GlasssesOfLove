@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import { UseImages } from "./images"
 
 const MainDIv = styled.div`
-    background: #EDEFF1;
+    background: #FFFFFF;
     width: 100%;
     margin-top: 5rem;
 
@@ -47,6 +46,10 @@ const ImageBackground = styled.div`
     color: #FFFFFF;
     z-index: 9;
     opacity: 0.8;
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 
     ${ImageDiv}:hover & {
         display: flex;
@@ -103,15 +106,15 @@ const Description = styled.div`
         padding: .9rem 2.5rem .9rem 2rem;
     }
 `
-const Button = styled.div`
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
-`
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: #FFFFFF;
-`
+// const Button = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     padding-bottom: 1rem;
+// `
+// const StyledLink = styled(Link)`
+//     text-decoration: none;
+//     color: #FFFFFF;
+// `
 
 
 const Work = () => {
@@ -126,9 +129,9 @@ const Work = () => {
                     <ImageDiv>
                         <div style={{position: "relative"}}>
                             <ImageBackground>
-                                <StyledLink to="/coming-soon">
+                                <a href="https://drive.google.com/drive/folders/1jtQXpa08gYNvuu4c3dgXfZJYfvQbWLXo?usp=sharing" target="_blank" rel="noopener noreferrer">
                                     VIEW ALL PHOTOS
-                                </StyledLink>
+                                </a>
                             </ImageBackground>
                             <Img fluid={workFirstImage.childImageSharp.fluid} />
                         </div>
@@ -144,16 +147,16 @@ const Work = () => {
                     <ImageDiv>
                         <div style={{position: "relative"}}>
                             <ImageBackground>
-                                <StyledLink to="/coming-soon">
+                                <a href="https://drive.google.com/drive/folders/1Jeni69CyZmS-xxMyRw4c5inA9cmlJ3MS?usp=sharing" target="_blank" rel="noopener noreferrer">
                                     VIEW ALL PHOTOS
-                                </StyledLink>
+                                </a>
                             </ImageBackground>
                             <Img fluid={workSecondImage.childImageSharp.fluid} />
                         </div>
                         <Description>
                             <div>
-                                <h3>Imani Children’s Home (Soweto, Kayole)</h3>
-                                <h2>December 15, 2019</h2>
+                                <h3>Kibera Feeding Program</h3>
+                                <h2>October 2020</h2>
                             </div>
                         </Description>
                     </ImageDiv>
@@ -162,9 +165,9 @@ const Work = () => {
                     <ImageDiv>
                         <div style={{position: "relative"}}>
                             <ImageBackground>
-                                <StyledLink to="/coming-soon">
+                                <a href="https://drive.google.com/drive/folders/1G4y3shQy4UxOckHPzmWCCFKuPOOjtqBN?usp=sharing" target="_blank" rel="noopener noreferrer">
                                     VIEW ALL PHOTOS
-                                </StyledLink>
+                                </a>
                             </ImageBackground>
                             <Img fluid={workThirdImage.childImageSharp.fluid} />
                         </div>

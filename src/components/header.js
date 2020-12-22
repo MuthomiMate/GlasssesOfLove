@@ -30,21 +30,27 @@ class Header extends Component {
 
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    this.setState({
-      scrollY: currentScrollPos
-    })
+    const { scrollY } = this.state;
+    if((scrollY <= 60 && currentScrollPos > 60) || (scrollY > 60 && currentScrollPos <= 60 )) {
+      this.setState({
+        scrollY: currentScrollPos
+      })
+    }
   }
   render(){
     const { scrollY } = this.state;
     const hideBackground = scrollY > 60;
     const StyledHeader = styled.div`
-      transition: background 0.5s ease;
+      transition: background 2s ease;
       background: ${props => (props.hideBackground ? "#FFFFFF" : "transparent")};
       margin-bottom: 1.45rem;
       box-shadow:  ${props => (props.hideBackground ? "0 1px 1px rgba(0,0,0,.1)" : "none")};
       position: fixed;
       width: 100%;
       z-index: 100;
+      -webkit-transition: background 2s ease-out;
+      -moz-transition: background 2s ease-out;
+      -o-transition: background 2s ease-out;
     `
     const StyledDiv = styled.div`
       display: flex;

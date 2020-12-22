@@ -172,7 +172,7 @@ const CardOverlayContent = styled.div`
 `
 
 const Profile = () => {
-    const { muthomiImage, koriImage, lamechImage, kimaniImage, lilianImage, austinImage, noImageGirl, noImageBoy } = UseImages()
+    const { muthomiImage, koriImage, lamechImage, kimaniImage, lilianImage, austinImage, noImageGirl, noImageBoy, janeImage } = UseImages()
     return (
         <MainDiv>
             <TextDiv>
@@ -233,7 +233,7 @@ const Profile = () => {
                                 </Icons>
                             </CardOverlayContent>
                         </CardOverlay>
-                        <Img fluid={noImageGirl.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}/>
+                        <Img fluid={janeImage.childImageSharp.fluid} objectFit="cover" objectPosition="50% 50%" style={{height: '310px'}}/>
                     </div>
                     <InfoDiv>
                         <h5>Jane Wambui</h5>
