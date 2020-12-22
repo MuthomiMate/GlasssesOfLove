@@ -12,7 +12,8 @@ const StyledDiv = styled.div`
 
     h3 {
         line-height: 1.2;
-        margin-bottom: .6em;
+        margin: 0 auto .6em;
+        max-width: 34em;
         font-size: 2.15rem;
         font-weight: 600;
         font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -33,10 +34,10 @@ const Reason = () => {
         <StyledDiv>
             <DetailsDiv>
                 <h3>
-                    Over a billion people live in slums.
+                Today's society is packed with children who are growing up without parental love and care.
                 </h3>
                 <p>
-                    That’s 14% of the world’s population. Put another way, that's 1 in 8 people alive today living without hope amongst trash, sewage, drugs, and abuse in unimaginable conditions. Life without secure housing is a life without basic needs being met. Families living without safety, stability, education and nutrition lack dignity and hope for the future.
+                This leads to quite a number of problems  in their day to day lives. Our goal is to ensure that they never feel they are alone. This we do through our mentorship program that we hold in each and every visit we conduct. The goal is to share love and brightness to a little soul. Aside from the mentorship, we ensure that a child has basic needs through our care package that we distribute in our visits. We come together as a society to make this happen.
                 </p>
             </DetailsDiv>
         </StyledDiv>
