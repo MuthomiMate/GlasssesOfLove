@@ -1,0 +1,14 @@
+button.rec-dot{
+    box-shadow: 0 0 1px 3px #F19002;
+}
+button.rec-dot_active{
+    background-color: #F7A13F;
+}
+
+button.rec-dot:hover, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px #F19002;
+}
+
+button.rec-arrow {
+    display: none;
+}

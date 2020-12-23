@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MainDiv = styled.div`
     height: 5rem;
-    background: #f7a13e;
+    background: #F19002;
 `
 
 const Section = styled.div`
@@ -49,7 +49,7 @@ const SecondFooter = () => {
                  <span>&copy;</span> 2020 Glasses Of Love
                 </h4>
                 <h4>
-                    Designed by <a href="https://github.com/MuthomiMate">Muthomi Mate</a>
+                    Designed by <a href="https://www.linkedin.com/in/muthomimate/" target="_blank" rel="noopener noreferrer">Muthomi Mate</a>
                 </h4>
             </Section>
         </MainDiv>

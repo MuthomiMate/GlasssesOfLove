@@ -6,6 +6,7 @@ import StyledReason from "../components/reason"
 import Upcoming from "../components/upcoming"
 import Work from "../components/work"
 import Footer from "../components/footer"
+import Testimonials from '../components/testimonials'
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <StyledBackgroundSection name="boys.jpg" />
     <StyledReason />
     <Upcoming />
+    <Testimonials />
     <Work />
     <Footer />
   </Layout>

@@ -17,28 +17,84 @@ export const UseImages = () => {
           }
         }
       },
-      workFirstImage: file(relativePath: { eq: "clean.jpeg" }) {
+      workFirstImage: file(relativePath: { eq: "Dinner1.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
-      workSecondImage: file(relativePath: { eq: "fun.jpeg" }) {
+      workSecondImage: file(relativePath: { eq: "kibera.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      workThirdImage: file(relativePath: { eq: "Eldoret4.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400, maxHeight: 270) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      muthomiImage: file(relativePath: { eq: "makena.jpeg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       },
-      workThirdImage: file(relativePath: { eq: "cooking.jpeg" }) {
+      koriImage: file(relativePath: { eq: "kori.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       },
-      muthomiImage: file(relativePath: { eq: "pp.jpeg" }) {
+      lamechImage: file(relativePath: { eq: "lamech.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      kimaniImage: file(relativePath: { eq: "kimani.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      lilianImage: file(relativePath: { eq: "lilian.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      austinImage: file(relativePath: { eq: "austin.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      janeImage: file(relativePath: { eq: "jane.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      noImageGirl: file(relativePath: { eq: "girl.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      noImageBoy: file(relativePath: { eq: "boy.png" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid

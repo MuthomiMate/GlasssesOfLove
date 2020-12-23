@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { Component } from "react"
 import styled from "styled-components"
 import logo from "../images/icon.png";
+import logoBright from "../images/icon-white.png"
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 
@@ -29,21 +30,27 @@ class Header extends Component {
 
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    this.setState({
-      scrollY: currentScrollPos
-    })
+    const { scrollY } = this.state;
+    if((scrollY <= 60 && currentScrollPos > 60) || (scrollY > 60 && currentScrollPos <= 60 )) {
+      this.setState({
+        scrollY: currentScrollPos
+      })
+    }
   }
   render(){
     const { scrollY } = this.state;
     const hideBackground = scrollY > 60;
     const StyledHeader = styled.div`
-      transition: background 0.5s ease;
+      transition: background 2s ease;
       background: ${props => (props.hideBackground ? "#FFFFFF" : "transparent")};
       margin-bottom: 1.45rem;
       box-shadow:  ${props => (props.hideBackground ? "0 1px 1px rgba(0,0,0,.1)" : "none")};
       position: fixed;
       width: 100%;
       z-index: 100;
+      -webkit-transition: background 2s ease-out;
+      -moz-transition: background 2s ease-out;
+      -o-transition: background 2s ease-out;
     `
     const StyledDiv = styled.div`
       display: flex;
@@ -60,7 +67,6 @@ class Header extends Component {
 
       img {
         height: 4rem;
-        width: 9.75rem;
         margin: auto 0;
       }
     `
@@ -82,6 +88,20 @@ class Header extends Component {
       padding: 0 15px;
       margin-bottom: 0;
     }
+    button {
+      background: #000;
+      margin-top: -20px;
+      border: 1px solid #131B22;
+      cursor: pointer;
+      color: #fff;
+      font-weight: normal;
+      line-height: 1.25;
+      text-align: center;
+      padding: .4em 1.85em;
+      font-size: 1.25rem;
+      outline: none;
+      border-radius: 0.3rem;
+  }
   `
 
   const StyledBars = styled.div`
@@ -132,7 +152,7 @@ class Header extends Component {
       <StyledHeader hideBackground={hideBackground}>
         <StyledDiv>
           <a href="http://www.glassesoflove.or.ke">
-            <img src={logo} alt="Logo" />
+            <img src={hideBackground ? logo : logoBright} alt="Logo" />
           </a>
           <StyledBars onClick={this.toggleMobileMenu}>
             <FaBars color={hideBackground ? "#000000" : "#FFFFFF"} size="2em" />
@@ -141,7 +161,12 @@ class Header extends Component {
             <ul>
             <li> <StyledLink to="/" hideBackground={hideBackground}>Home</StyledLink></li>
             <li> <StyledLink to="/about" hideBackground={hideBackground}>About Us</StyledLink></li>
-            <li> <StyledLink to="/coming-soon" hideBackground={hideBackground}>Contact Us</StyledLink> </li>
+            <li> <StyledLink to="/contact" hideBackground={hideBackground}>Contact Us</StyledLink> </li>
+            <li>
+              <a href="https://chat.whatsapp.com/BpTRK9kKIEK3rxrUIAyux7" target="_blank" rel="noopener noreferrer">
+                <button type="button">Join Us</button>
+              </a>
+            </li>
             </ul>
           </Nav>
         </StyledDiv>
@@ -153,7 +178,12 @@ class Header extends Component {
           <ul>
           <li> <StyledLink to="/">Home</StyledLink></li>
           <li> <StyledLink to="/about">About Us</StyledLink></li>
-          <li> <StyledLink to="/coming-soon">Contact Us</StyledLink> </li>
+          <li> <StyledLink to="/contact">Contact Us</StyledLink> </li>
+          <li>
+              <a href="https://chat.whatsapp.com/BpTRK9kKIEK3rxrUIAyux7" target="_blank" rel="noopener noreferrer">
+                <button type="button">Join Us</button>
+              </a>
+            </li>
           </ul>
       </MobileDiv>
         )}

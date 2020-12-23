@@ -2,23 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-    background-color: #00BFAD;
-    height: 35rem;
+    background-color: #F19002;
     margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #ffffff;
-
-    @media screen and (max-width: 575px) {
-        height: 40rem;
-    }
-    @media screen and (max-width: 500px) {
-        height: 45rem;
-    }
-    @media screen and (max-width: 475px) {
-        height: 50rem;
-    }
 
     h3 {
         line-height: 69.888px;
@@ -33,10 +21,10 @@ const StyledDiv = styled.div`
         }
     }
     p {
-        font-size: 21.216px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 33.9456px;
-        max-width: 42em;
+        max-width: 80em;
         margin: 0 auto 1em;
         font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
@@ -44,10 +32,15 @@ const StyledDiv = styled.div`
             font-size: 18px;
         }
     }
+    ul {
+        list-style-type: lower-roman;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const TextDiv = styled.div`
-    height: 70%;
     margin: auto;
 
     @media screen and (max-width: 420px) {
@@ -63,11 +56,26 @@ const companyInfo = () => {
                     Who We Are
                 </h3>
                 <p>
-                    That’s 14% of the world’s population. Put another way, that's 1 in 8 people alive today living without hope amongst trash, sewage, drugs, and abuse in unimaginable conditions. Life without secure housing is a life without basic needs being met. Families living without safety, stability, education and nutrition lack dignity and hope for the future.
+                Glasses of Love Foundation works towards bringing brightness to the children in the society through visiting them in homes, prisons, rehabilitation centers, hospitals, and schools to play, pray, donate, and generally spend time with them all over Kenya.
                 </p>
-                <p>
-                    That’s 14% of the world’s population. Put another way, that's 1 in 8 people alive today living without hope amongst trash, sewage, drugs, and abuse in unimaginable conditions. Life without secure housing is a life without basic needs being met. Families living without safety, stability, education and nutrition lack dignity and hope for the future.
-                </p>
+                <p><em>Drive:</em> Caring about each other in the society hence the slogan: “Because We Care”</p>
+                <p><em>Passion:</em> Young people with the heart of giving back to the society economically, spiritually and socially.</p>
+                <p><em>Our Story:</em> The idea of giving back to the society was conceived in 2013 and our focus is to share love in three ways namely:</p>
+                <ul>
+                    <li>Charity visits</li>
+                    <li>Donations</li>
+                    <li>Mentorship</li>
+                </ul>
+                <p><em>Mission:</em> Create a community of friends aimed at giving back to the society.</p>
+                <p><em>Vision:</em> Establish a culture of giving back to the society where people will have happy lives, poverty will be eradicated, and love made a life medication.</p>
+                <p><em>Values</em></p>
+                <ul>
+                    <li>Integrity – We are honest in all group operations</li>
+                    <li>Teamwork – We work together as a community of friends</li>
+                    <li>Passion – We are driven by the heart of giving back to the society</li>
+                    <li>Creativity – We invent ways of bringing brightness to lives</li>
+                    <li>Consistency – We always have the heart of giving back to the society</li>
+                </ul>
             </TextDiv>
         </StyledDiv>
     )

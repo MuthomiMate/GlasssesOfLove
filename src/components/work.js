@@ -1,39 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import { UseImages } from "./images"
 
 const MainDIv = styled.div`
-    background: #EDEFF1;
-    height: 47rem;
+    background: #FFFFFF;
     width: 100%;
     margin-top: 5rem;
-
-    @media screen and (max-width: 976px) {
-        height: 48rem;
-    }
-
-    @media screen and (max-width: 797px) {
-        height: 52rem;
-    }
-    @media screen and (max-width: 697px) {
-        height: 85rem;
-    }
-    @media screen and (max-width: 550px) {
-        height: 115rem;
-    }
-    @media screen and (max-width: 490px) {
-        height: 120rem;
-    }
-    @media screen and (max-width: 357px) {
-        height: 130rem;
-    }
 
     h3 {
         text-align: center;
         line-height: 1.2;
-        color: #00bfad;
         font-size: 2.8em;
         padding: 1em 1em 0.5em 1em;
         font-weight: 600;
@@ -53,6 +30,8 @@ const ImageDiv = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    border-top: none;
+    border: 1px solid #d1d3d1;
 `
 
 const ImageBackground = styled.div`
@@ -67,44 +46,28 @@ const ImageBackground = styled.div`
     color: #FFFFFF;
     z-index: 9;
     opacity: 0.8;
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 
     ${ImageDiv}:hover & {
         display: flex;
     }
 `
 const Card = styled.div`
-    flex-grow: 1;
-    margin: 0 .5rem;
-    width: 30%;
-    height: 90%;
-    @media screen and (max-width: 696px) {
-        margin-top: 1rem;
-        width: 40%;
+    flex: 0 1 32%;
+    margin: 1rem auto;
+
+    @media screen and (max-width: 870px) {
+        flex: 0 1 48%;
     }
 
-    @media screen and (max-width: 550px) {
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    Img {
-        height: 51.5%;
-    }
-
-    ImageBackground {
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 51.5%;
-        opacity: 0;
-        z-index: 11;
-        transition: all 0.5s;
-        background: rgba(0, 0, 0, 0.6);
+    @media screen and (max-width: 500px) {
+        flex: 0 1 90%;
     }
 `
 const Description = styled.div`
-    border-top: none;
-    border: 1px solid #d1d3d1;
     h3 {
         text-align: start;
         font-size: 2em;
@@ -143,15 +106,15 @@ const Description = styled.div`
         padding: .9rem 2.5rem .9rem 2rem;
     }
 `
-const Button = styled.div`
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
-`
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: #FFFFFF;
-`
+// const Button = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     padding-bottom: 1rem;
+// `
+// const StyledLink = styled(Link)`
+//     text-decoration: none;
+//     color: #FFFFFF;
+// `
 
 
 const Work = () => {
@@ -164,69 +127,57 @@ const Work = () => {
             <Cards>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workFirstImage.childImageSharp.fluid} />
-                    </ImageDiv>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
+                                <a href="https://drive.google.com/drive/folders/1jtQXpa08gYNvuu4c3dgXfZJYfvQbWLXo?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    VIEW ALL PHOTOS
+                                </a>
+                            </ImageBackground>
+                            <Img fluid={workFirstImage.childImageSharp.fluid} />
+                        </div>
                     <Description>
                         <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
-                                <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
-                                </StyledLink>
-                            </Button>
+                            <h3>GOL Gala Dinner</h3>
+                            <h2> February 29, 2020</h2>
                         </div>
                     </Description>
+                </ImageDiv>
                 </Card>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workSecondImage.childImageSharp.fluid} />
-                    </ImageDiv>
-                    <Description>
-                        <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
-                                <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
-                                </StyledLink>
-                            </Button>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
+                                <a href="https://drive.google.com/drive/folders/1Jeni69CyZmS-xxMyRw4c5inA9cmlJ3MS?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    VIEW ALL PHOTOS
+                                </a>
+                            </ImageBackground>
+                            <Img fluid={workSecondImage.childImageSharp.fluid} />
                         </div>
-                    </Description>
+                        <Description>
+                            <div>
+                                <h3>Kibera Feeding Program</h3>
+                                <h2>October 2020</h2>
+                            </div>
+                        </Description>
+                    </ImageDiv>
                 </Card>
                 <Card>
                     <ImageDiv>
-                        <ImageBackground>
-                            <StyledLink to="/coming-soon">
-                                VIEW ALL PHOTOS
-                            </StyledLink>
-                        </ImageBackground>
-                        <Img fluid={workThirdImage.childImageSharp.fluid} />
-                    </ImageDiv>
-                    <Description>
-                        <div>
-                            <h3>Nairobi street feeding</h3>
-                            <h2> January 12, 2019</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit.</p>
-                            <Button>
-                                <StyledLink to="/coming-soon">
-                                    <button>View  all pictures</button>
-                                </StyledLink>
-                            </Button>
+                        <div style={{position: "relative"}}>
+                            <ImageBackground>
+                                <a href="https://drive.google.com/drive/folders/1G4y3shQy4UxOckHPzmWCCFKuPOOjtqBN?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    VIEW ALL PHOTOS
+                                </a>
+                            </ImageBackground>
+                            <Img fluid={workThirdImage.childImageSharp.fluid} />
                         </div>
-                    </Description>
+                        <Description>
+                            <div>
+                                <h3>Berur and Neema Annex Children Homes</h3>
+                                <h2>October 18-20, 2019</h2>
+                            </div>
+                        </Description>
+                    </ImageDiv>
                 </Card>
             </Cards>
         </MainDIv>
