@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+// import BackgroundImage from 'gatsby-background-image'
 import Img from "gatsby-image";
 
 const MainDiv = styled.div`
@@ -36,15 +36,15 @@ const FirstImage = styled.div`
         flex: 0 1 80%;
     }
 `
-const StyledBackgroundImage = styled(BackgroundImage)`
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: contain;
-`
+// const StyledBackgroundImage = styled(BackgroundImage)`
+//   width: 100%;
+//   height: 100%;
+//   z-index: 0;
+//   background-size: auto;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   object-fit: contain;
+// `
 const Upcoming = () => {
     return (
         <StaticQuery

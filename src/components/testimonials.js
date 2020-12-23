@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from 'styled-components'
 import TestimonialCard from './testCard'
 import Carousel from 'react-elastic-carousel';
@@ -31,20 +31,21 @@ const TestContainer = styled.div`
 `
 
 const Testimonials = () => {
-    const {muthomiImage, koriImage, noImageGirl, noImageBoy} = UseImages();
+    const {koriImage, noImageGirl, noImageBoy} = UseImages();
     const Tests = [
         (
             <TestContainer>
+
                 <TestimonialCard
-                    message="I believe that we all have a responsibility to give back. No one becomes successful without lots of hard work, support from others, and a little luck. Giving back creates a virtuous cycle that makes everyone more successful"
-                    name="Yvonne Makena"
-                    position="CEO, CoFounder"
-                    image={muthomiImage}
-                    />
+                    message="I really enjoy doing charity, for a good cause, it's like the least I can do, I really enjoy that stuff. I enjoy giving back."
+                    name="Kori"
+                    position="Media Leader"
+                    image={koriImage}
+                />
                 <TestimonialCard
                     message="The name 'Reflect It Back' comes from the idea of not only giving back but also seeing yourself in someone else."
                     name="Limo Allan"
-                    position="Head of Social Media"
+                    position="Member"
                     image={noImageBoy}
                 />
             </TestContainer>
@@ -74,26 +75,20 @@ const Testimonials = () => {
                         image={noImageBoy}
                     />
                     <TestimonialCard
-                        message="I really enjoy doing charity, for a good cause, it's like the least I can do, I really enjoy that stuff. I enjoy giving back."
-                        name="Kori"
-                        position="Head of Graphics"
-                        image={koriImage}
+                        message="Giving back is something that comes from the heart to me. It's not that I do it because it's the right thing: I do it because I want do it."
+                        position="Cofounder"
+                        name="Irene"
+                        image={noImageGirl}
                     />
             </TestContainer>
         ),
         (
             <TestContainer>
                     <TestimonialCard
-                        message="Giving back is something that comes from the heart to me. It's not that I do it because it's the right thing: I do it because I want do it."
-                        position="Cofounder"
-                        name="Irene"
-                        image={noImageGirl}
-                    />
-                    <TestimonialCard
                         message="We must give more in order to get more. It is the generous giving of ourselves that produces the generous harvest."
                         name="d3"
                         image={noImageBoy}
-                        position="Head of Media"
+                        position="Member"
                     />
             </TestContainer>
         )
@@ -104,7 +99,7 @@ const Testimonials = () => {
             <h3>Testimonials</h3>
             <Carousel
             enableAutoPlay
-            autoPlaySpeed={2000}
+            autoPlaySpeed={5000}
             >
                 {Tests.map(test => <div> {test} </div>)}
             </Carousel>

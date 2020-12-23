@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { SocialIcon } from 'react-social-icons';
-import  { FaTwitter, FaFacebook, FaInstagram} from "react-icons/fa";
 import { UseImages } from "./images"
 
 const MainDiv = styled.div`

@@ -88,6 +88,20 @@ class Header extends Component {
       padding: 0 15px;
       margin-bottom: 0;
     }
+    button {
+      background: #000;
+      margin-top: -20px;
+      border: 1px solid #131B22;
+      cursor: pointer;
+      color: #fff;
+      font-weight: normal;
+      line-height: 1.25;
+      text-align: center;
+      padding: .4em 1.85em;
+      font-size: 1.25rem;
+      outline: none;
+      border-radius: 0.3rem;
+  }
   `
 
   const StyledBars = styled.div`
@@ -147,7 +161,12 @@ class Header extends Component {
             <ul>
             <li> <StyledLink to="/" hideBackground={hideBackground}>Home</StyledLink></li>
             <li> <StyledLink to="/about" hideBackground={hideBackground}>About Us</StyledLink></li>
-            <li> <StyledLink to="/coming-soon" hideBackground={hideBackground}>Contact Us</StyledLink> </li>
+            <li> <StyledLink to="/contact" hideBackground={hideBackground}>Contact Us</StyledLink> </li>
+            <li>
+              <a href="https://chat.whatsapp.com/BpTRK9kKIEK3rxrUIAyux7" target="_blank" rel="noopener noreferrer">
+                <button type="button">Join Us</button>
+              </a>
+            </li>
             </ul>
           </Nav>
         </StyledDiv>
@@ -159,7 +178,12 @@ class Header extends Component {
           <ul>
           <li> <StyledLink to="/">Home</StyledLink></li>
           <li> <StyledLink to="/about">About Us</StyledLink></li>
-          <li> <StyledLink to="/coming-soon">Contact Us</StyledLink> </li>
+          <li> <StyledLink to="/contact">Contact Us</StyledLink> </li>
+          <li>
+              <a href="https://chat.whatsapp.com/BpTRK9kKIEK3rxrUIAyux7" target="_blank" rel="noopener noreferrer">
+                <button type="button">Join Us</button>
+              </a>
+            </li>
           </ul>
       </MobileDiv>
         )}

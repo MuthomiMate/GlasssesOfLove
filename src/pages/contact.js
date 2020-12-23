@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Coming-soon" />
+    <SEO title="contact" />
     <Multimedia />
     <Footer />
   </Layout>
