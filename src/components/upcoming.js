@@ -56,21 +56,29 @@ const Upcoming = () => {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
+                },
+                upcoming1: file(relativePath: { eq: "upcoming.jpeg" }) {
+                    childImageSharp {
+                    fluid(quality: 100, maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                    }
                 }
                 }
             `}
         render={data => {
             const imageData = data.desktop.childImageSharp.fluid;
+            const firstImage = data.upcoming1.childImageSharp.fluid;
             return (<MainDiv>
             <h3>
                 Our upcoming  projects
             </h3>
             <ImagesDiv>
                 <FirstImage>
-                    <Img fluid={imageData} />
+                    <Img fluid={firstImage} />
                 </FirstImage>
                 <FirstImage>
-                    <Img fluid={imageData} />
+                    <Img fluid={firstImage} />
                 </FirstImage>
             </ImagesDiv>
         </MainDiv>)
