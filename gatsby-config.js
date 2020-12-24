@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Glasses of Love`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Glasses of Love is a group of friends with the same vision and mission of giving back to the society. We create time for charity visits to play, pray, donate and bring brightness to little lives.😊`,
+    author: `@muthomimate`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
