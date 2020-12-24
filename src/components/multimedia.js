@@ -85,9 +85,9 @@ const Multimedia = () => {
             <div>
                 <h3>Contact Us</h3>
                 <div style={{display: "flex", flexWrap: "wrap"}}>
-                    <form name="contacts" method="POST" data-netlify="true">
+                    <form name="Contact Form" method="POST" data-netlify="true">
                         <div style={{minWidth: "300px", color: "#464a4c", margin: "0 .5rem"}}>
-                            <input type="hidden" name="contacts" value="contacts"></input>
+                            <input type="hidden" name="form-name" value="Contact Form" />
                             <input type="text" name="firstName" id="name" placeholder="First Name" required/>
                             <input type="text" name="lastName" id="lname" placeholder="Last Name" required/>
                             <input type="email" name="email" id="email" placeholder="Email" required/>
